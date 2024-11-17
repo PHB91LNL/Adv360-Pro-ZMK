@@ -163,6 +163,41 @@
             bindings = <>;
             label = "ATILDEMAJ";
         };
+
+        Tremaseul: Tremaseul {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "TREMASEUL";
+        };
+
+        degressymbole: degressymbole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "DEGRESSYMBOLE";
+        };
+
+        Tildeseul: Tildeseul {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>;
+            label = "TILDESEUL";
+        };
+
+        plusoumoinssymbole: plusoumoinssymbole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "PLUSOUMOINSSYMBOLE";
+        };
+
+        cubesymbole: cubesymbole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "CUBESYMBOLE";
+        };
     };
 
     keymap {
@@ -172,7 +207,7 @@
             bindings = <
 &square  &kp AMPERSAND  &eaig          &kp DOUBLE_QUOTES  &kp APOS   &kp LEFT_PARENTHESIS  &tog 1                                                   &mo 3      &kp MINUS  &egrav     &kp UNDERSCORE  &ccedille   &agrave    &kp RIGHT_PARENTHESIS
 &kp TAB  &kp A          &kp Z          &kp E              &kp R      &kp T                 &none                                                    &none      &kp Y      &kp U      &kp I           &kp O       &kp P      &kp CARET
-&tog 4   &kp Q          &kp S          &kp D              &kp F      &kp G                 &tog 6    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &kp J      &kp K           &kp L       &kp M      &ugrave
+&tog 4   &kp Q          &kp S          &kp D              &kp F      &kp G                 &tog 6    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 7      &kp H      &kp J      &kp K           &kp L       &kp M      &ugrave
 &mo 4    &kp W          &kp X          &kp C              &kp V      &kp B                                      &kp HOME      &kp PG_UP                        &kp N      &kp COMMA  &kp SEMICOLON   &kp COLON   &kp EXCL   &kp RSHFT
 &mo 2    &kp ESC        &kp LESS_THAN  &kp LEFT           &kp RIGHT                        &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp SPACE  &kp ENTER             &kp UP     &kp DOWN        &kp DOLLAR  &kp ASTRK  &mo 2
             >;
@@ -210,11 +245,11 @@
 
         Upper.France {
             bindings = <
-&tog 5   &kp N1            &kp N2            &kp N3     &kp N4     &kp N5     &tog 1                                                   &mo 3      &kp N6     &kp N7     &kp N8         &kp N9      &kp N0            &kp MINUS
-&kp TAB  &kp LS(A)         &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)   &kp LS(P)         &kp BSLH
-&tog 0   &kp LS(Q)         &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 5    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)   &kp LS(M)         &kp PERCENT
-&mo 5    &kp LS(W)         &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp COMMA  &kp SEMICOLON  &kp COLON   &paragraphsymbol  &mo 5
-&mo 2    &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP     &kp DOWN       &GBPsymbol  &mumicrosymbol    &mo 2
+&tog 5   &kp N1      &kp N2            &kp N3     &kp N4     &kp N5     &tog 1                                                   &mo 3      &kp N6     &kp N7        &kp N8      &kp N9      &kp N0            &degressymbole
+&kp TAB  &kp LS(A)   &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)     &kp LS(I)   &kp LS(O)   &kp LS(P)         &Tremaseul
+&tog 0   &kp LS(Q)   &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 5    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 7      &kp LS(H)  &kp LS(J)     &kp LS(K)   &kp LS(L)   &kp LS(M)         &kp PERCENT
+&mo 5    &kp LS(W)   &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp QUESTION  &kp KP_DOT  &kp FSLH    &paragraphsymbol  &mo 5
+&mo 2    &kp ESCAPE  &kp GREATER_THAN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP        &kp DOWN    &GBPsymbol  &mumicrosymbol    &mo 2
             >;
         };
 
@@ -222,7 +257,7 @@
             bindings = <
 &trans  &trans      &EAIGMAJ  &trans  &trans  &trans  &trans                                      &trans  &trans  &EGRAVMAJ  &trans  &CCEDILLEMAJ  &AGRAVMAJ  &trans
 &trans  &AAIGMAJ    &EDANSLA  &trans  &trans  &trans  &trans                                      &trans  &trans  &UGRAVMAJ  &trans  &OGRAVMAJ     &trans     &trans
-&trans  &ATILDEMAJ  &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans        &trans     &trans
+&trans  &ATILDEMAJ  &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mo 7   &trans  &trans     &trans  &trans        &trans     &trans
 &trans  &trans      &trans    &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans        &trans     &trans
 &trans  &trans      &trans    &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans        &trans     &trans
             >;
@@ -240,11 +275,11 @@
 
         Caracteres.Speciaux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&cubesymbole  &plusoumoinssymbole  &kp TILDE  &kp POUND  &kp LEFT_BRACE  &kp LEFT_BRACKET  &trans                                      &trans  &kp PIPE  &kp GRAVE  &kp NON_US_BACKSLASH  &kp RIGHT_BRACE  &kp AT_SIGN  &kp RIGHT_BRACKET
+&trans        &trans               &trans     &trans     &trans          &trans            &trans                                      &trans  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &trans     &trans          &trans            &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &trans     &trans          &trans                            &trans      &trans                  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &trans     &trans                            &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans                &trans           &trans       &trans
             >;
         };
     };
