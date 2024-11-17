@@ -226,6 +226,34 @@
             bindings = <>;
             label = "LITERSYMBOL";
         };
+
+        edanslamin: edanslamin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EDANSLAMIN";
+        };
+
+        edanslomin: edanslomin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EDANSLOMIN";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        edanslamin {
+            bindings = <&edanslamin>;
+            key-positions = <15 17>;
+        };
+
+        edanslomin {
+            bindings = <&edanslomin>;
+            key-positions = <17 25>;
+        };
     };
 
     keymap {
@@ -233,27 +261,47 @@
 
         lower.France {
             bindings = <
-&square  &kp AMPERSAND  &eaig          &kp DOUBLE_QUOTES  &kp APOS   &kp LEFT_PARENTHESIS  &tog 1                                                   &mo 3      &kp MINUS  &egrav     &kp UNDERSCORE  &ccedille   &agrave    &kp RIGHT_PARENTHESIS
-&kp TAB  &kp A          &kp Z          &kp E              &kp R      &kp T                 &none                                                    &none      &kp Y      &kp U      &kp I           &kp O       &kp P      &kp CARET
-&tog 4   &kp Q          &kp S          &kp D              &kp F      &kp G                 &tog 6    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 7      &kp H      &kp J      &kp K           &kp L       &kp M      &ugrave
-&mo 4    &kp W          &kp X          &kp C              &kp V      &kp B                                      &kp HOME      &kp PG_UP                        &kp N      &kp COMMA  &kp SEMICOLON   &kp COLON   &kp EXCL   &kp RSHFT
-&mo 2    &kp ESC        &kp LESS_THAN  &kp LEFT           &kp RIGHT                        &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp SPACE  &kp ENTER             &kp UP     &kp DOWN        &kp DOLLAR  &kp ASTRK  &mo 2
+&square  &kp AMPERSAND  &eaig          &kp DOUBLE_QUOTES  &kp APOS   &kp LEFT_PARENTHESIS  &mo 3                                                    &mo 5      &kp MINUS  &egrav     &kp UNDERSCORE  &ccedille   &agrave    &kp RIGHT_PARENTHESIS
+&kp TAB  &kp A          &kp Z          &kp E              &kp R      &kp T                 &tog 1                                                   &tog 2     &kp Y      &kp U      &kp I           &kp O       &kp P      &kp CARET
+&tog 6   &kp Q          &kp S          &kp D              &kp F      &kp G                 &tog 3    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 8      &kp H      &kp J      &kp K           &kp L       &kp M      &ugrave
+&mo 6    &kp W          &kp X          &kp C              &kp V      &kp B                                      &kp HOME      &kp PG_UP                        &kp N      &kp COMMA  &kp SEMICOLON   &kp COLON   &kp EXCL   &kp RSHFT
+&mo 4    &kp ESC        &kp LESS_THAN  &kp LEFT           &kp RIGHT                        &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp SPACE  &kp ENTER             &kp UP     &kp DOWN        &kp DOLLAR  &kp ASTRK  &mo 4
+            >;
+        };
+
+        US-Keyboard {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                      &kp N7  &kp N8  &kp N9  &kp N0     &kp F1    &kp F2     &kp BSPC
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y                                       &kp U   &kp I   &kp O   &kp P      &kp LBKT  &kp RBKT   &kp BSLH
+&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &trans  &trans      &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI   &kp APOS  &kp ENTER  &trans
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                   &trans      &trans                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+&trans     &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &trans    &trans     &trans
+            >;
+        };
+
+        Greek.Alphabet {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp ESCAPE    &kp HOME        &none  &none           &none         &none      &trans                                                   &mo 3      &kp PRINTSCREEN  &kp KP_NUM  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &kp AT
+&kp ESCAPE    &kp HOME        &none  &none           &none         &none      &trans                                                   &mo 5      &kp PRINTSCREEN  &kp KP_NUM  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &kp AT
 &kp TAB       &kp DOWN_ARROW  &kp W  &kp E           &kp R         &kp T      &none                                                    &none      &kp INS          &kp KP_N7   &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &kp DOWN
 &kp CAPSLOCK  &kp A           &kp S  &kp D           &kp UP_ARROW  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp DEL          &kp KP_N4   &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &kp SQT
 &kp LSHFT     &kp Z           &kp X  &kp LEFT_ARROW  &kp V         &kp RIGHT                       &kp HOME      &kp PG_UP                        &kp KP_EQUAL     &kp KP_N1   &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &kp RSHFT
-&mo 2         &kp GRAVE       &none  &kp LEFT        &kp DOWN                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                   &kp LEFT    &kp RIGHT     &kp KP_DOT       &kp KP_ENTER  &mo 2
+&mo 4         &kp GRAVE       &none  &kp LEFT        &kp DOWN                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                   &kp LEFT    &kp RIGHT     &kp KP_DOT       &kp KP_ENTER  &mo 4
             >;
         };
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 3                                      &mo 5   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
@@ -273,11 +321,11 @@
 
         Upper.France {
             bindings = <
-&tog 5   &kp N1      &kp N2            &kp N3     &kp N4     &kp N5     &tog 1                                                   &mo 3      &kp N6     &kp N7        &kp N8      &kp N9      &kp N0            &degressymbole
+&tog 7   &kp N1      &kp N2            &kp N3     &kp N4     &kp N5     &tog 3                                                   &mo 5      &kp N6     &kp N7        &kp N8      &kp N9      &kp N0            &degressymbole
 &kp TAB  &kp LS(A)   &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)     &kp LS(I)   &kp LS(O)   &kp LS(P)         &Tremaseul
-&tog 0   &kp LS(Q)   &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 5    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 7      &kp LS(H)  &kp LS(J)     &kp LS(K)   &kp LS(L)   &kp LS(M)         &kp PERCENT
-&mo 5    &kp LS(W)   &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp QUESTION  &kp KP_DOT  &kp FSLH    &paragraphsymbol  &mo 5
-&mo 2    &kp ESCAPE  &kp GREATER_THAN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP        &kp DOWN    &GBPsymbol  &mumicrosymbol    &mo 2
+&tog 0   &kp LS(Q)   &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 7    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 8      &kp LS(H)  &kp LS(J)     &kp LS(K)   &kp LS(L)   &kp LS(M)         &kp PERCENT
+&mo 7    &kp LS(W)   &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp QUESTION  &kp KP_DOT  &kp FSLH    &paragraphsymbol  &mo 7
+&mo 4    &kp ESCAPE  &kp GREATER_THAN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP        &kp DOWN    &GBPsymbol  &mumicrosymbol    &mo 4
             >;
         };
 
@@ -285,19 +333,9 @@
             bindings = <
 &trans  &trans      &EAIGMAJ  &trans  &trans  &trans  &trans                                      &trans  &trans  &EGRAVMAJ  &trans  &CCEDILLEMAJ  &AGRAVMAJ  &trans
 &trans  &AAIGMAJ    &EDANSLA  &trans  &trans  &trans  &trans                                      &trans  &trans  &UGRAVMAJ  &trans  &OGRAVMAJ     &trans     &trans
-&trans  &ATILDEMAJ  &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mo 7   &trans  &trans     &trans  &trans        &trans     &trans
+&trans  &ATILDEMAJ  &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mo 8   &trans  &trans     &trans  &trans        &trans     &trans
 &trans  &trans      &trans    &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans        &trans     &trans
 &trans  &trans      &trans    &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans        &trans     &trans
-            >;
-        };
-
-        US-Keyboard {
-            bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                      &kp N7  &kp N8  &kp N9  &kp N0     &kp F1    &kp F2     &kp BSPC
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y                                       &kp U   &kp I   &kp O   &kp P      &kp LBKT  &kp RBKT   &kp BSLH
-&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &trans  &trans      &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI   &kp APOS  &kp ENTER  &trans
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                   &trans      &trans                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-&trans     &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &trans    &trans     &trans
             >;
         };
 
@@ -310,16 +348,6 @@
 &trans        &trans               &trans     &trans           &trans                              &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans                &trans           &trans       &trans
             >;
         };
-
-        Greek.Alphabet {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -327,7 +355,7 @@
 
         Shift.Accents.France {
             if-layers = <0>;
-            then-layer = <4>;
+            then-layer = <6>;
         };
     };
 };
