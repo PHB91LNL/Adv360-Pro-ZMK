@@ -13,7 +13,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -31,16 +30,81 @@
         };
     };
 
+    macros {
+        eaig: eaig {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EAIG";
+        };
+
+        egrav: egrav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EGRAV";
+        };
+
+        ccedille: ccedille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "CCEDILLE";
+        };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "AGRAVE";
+        };
+
+        ugrave: ugrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UGRAVE";
+        };
+
+        square: square {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "SQUARE";
+        };
+
+        GBPsymbol: GBPsign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "GBPSIGN";
+        };
+
+        mumicrosymbol: mumicrosymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "MUMICROSYMBOL";
+        };
+
+        paragraphsymbol: paragraphsymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "PARAGRAPHSYMBOL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         lower.France {
             bindings = <
-&kp ESC       &kp N1            &kp N2            &kp N3    &kp N4     &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7     &kp N8         &kp N9             &kp N0    &kp MINUS
-&kp TAB       &kp A             &kp Z             &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp U      &kp I          &kp O              &kp P     &kp BSLH
-&kp CAPSLOCK  &kp Q             &kp S             &kp D     &kp F      &kp G   &tog 6    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J      &kp K          &kp L              &kp M     &kp SQT
-&kp LSHFT     &kp W             &kp X             &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp COMMA  &kp SEMICOLON  &kp COLON          &kp FSLH  &kp RSHFT
-&mo 2         &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP     &kp DOWN       &kp RIGHT_BRACKET  &kp RBKT  &mo 2
+&square  &kp AMPERSAND  &eaig          &kp DOUBLE_QUOTES  &kp APOS   &kp LEFT_PARENTHESIS  &tog 1                                                   &mo 3      &kp MINUS  &egrav     &kp UNDERSCORE  &ccedille   &agrave    &kp RIGHT_PARENTHESIS
+&kp TAB  &kp A          &kp Z          &kp E              &kp R      &kp T                 &none                                                    &none      &kp Y      &kp U      &kp I           &kp O       &kp P      &kp CARET
+&tog 4   &kp Q          &kp S          &kp D              &kp F      &kp G                 &tog 6    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &kp J      &kp K           &kp L       &kp M      &ugrave
+&mo 4    &kp W          &kp X          &kp C              &kp V      &kp B                                      &kp HOME      &kp PG_UP                        &kp N      &kp COMMA  &kp SEMICOLON   &kp COLON   &kp EXCL   &kp RSHFT
+&mo 2    &kp ESC        &kp LESS_THAN  &kp LEFT           &kp RIGHT                        &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp SPACE  &kp ENTER             &kp UP     &kp DOWN        &kp DOLLAR  &kp ASTRK  &mo 2
             >;
         };
 
@@ -76,11 +140,11 @@
 
         Upper.France {
             bindings = <
-&kp ESC       &kp N1            &kp N2            &kp N3    &kp N4     &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7     &kp N8         &kp N9             &kp N0    &kp MINUS
-&kp TAB       &kp A             &kp Z             &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp U      &kp I          &kp O              &kp P     &kp BSLH
-&kt CAPSLOCK  &kp Q             &kp S             &kp D     &kp F      &kp G   &tog 5    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J      &kp K          &kp L              &kp M     &kp SQT
-&kp LSHFT     &kp W             &kp X             &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp COMMA  &kp SEMICOLON  &kp COLON          &kp FSLH  &kp RSHFT
-&mo 2         &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP     &kp DOWN       &kp RIGHT_BRACKET  &mo 4     &mo 2
+&tog 5   &kp N1            &kp N2            &kp N3     &kp N4     &kp N5     &tog 1                                                   &mo 3      &kp N6     &kp N7     &kp N8         &kp N9      &kp N0            &kp MINUS
+&kp TAB  &kp LS(A)         &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)   &kp LS(P)         &kp BSLH
+&tog 0   &kp LS(Q)         &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 5    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)   &kp LS(M)         &kp PERCENT
+&mo 5    &kp LS(W)         &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp COMMA  &kp SEMICOLON  &kp COLON   &paragraphsymbol  &mo 5
+&mo 2    &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP     &kp DOWN       &GBPsymbol  &mumicrosymbol    &mo 2
             >;
         };
 
@@ -101,6 +165,16 @@
 &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &trans  &trans      &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI   &kp APOS  &kp ENTER  &trans
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                   &trans      &trans                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
 &trans     &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &trans    &trans     &trans
+            >;
+        };
+
+        Caracteres.Speciaux {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
