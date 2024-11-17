@@ -93,6 +93,76 @@
             bindings = <>;
             label = "PARAGRAPHSYMBOL";
         };
+
+        EAIGMAJ: EAIGMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EAIGMAJ";
+        };
+
+        EGRAVMAJ: EGRAVMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EGRAVMAJ";
+        };
+
+        AGRAVMAJ: AGRAVMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "AGRAVMAJ";
+        };
+
+        ETREMAMAJ: ETREMAMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "ETREMAMAJ";
+        };
+
+        UGRAVMAJ: UGRAVMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UGRAVMAJ";
+        };
+
+        OGRAVMAJ: OGRAVMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "OGRAVMAJ";
+        };
+
+        CCEDILLEMAJ: CCEDILLEMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "CCEDILLEMAJ";
+        };
+
+        EDANSLA: EDANSLA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EDANSLA";
+        };
+
+        AAIGMAJ: AAIGMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "AAIGMAJ";
+        };
+
+        ATILDEMAJ: ATILDEMAJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "ATILDEMAJ";
+        };
     };
 
     keymap {
@@ -150,11 +220,11 @@
 
         ACCENTS.Maj.France {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &EAIGMAJ  &trans  &trans  &trans  &trans                                      &trans  &trans  &EGRAVMAJ  &trans  &CCEDILLEMAJ  &AGRAVMAJ  &trans
+&trans  &AAIGMAJ    &EDANSLA  &trans  &trans  &trans  &trans                                      &trans  &trans  &UGRAVMAJ  &trans  &OGRAVMAJ     &trans     &trans
+&trans  &ATILDEMAJ  &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans        &trans     &trans
+&trans  &trans      &trans    &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans        &trans     &trans
+&trans  &trans      &trans    &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans        &trans     &trans
             >;
         };
 
