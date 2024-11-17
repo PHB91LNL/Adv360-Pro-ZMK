@@ -321,11 +321,11 @@
 
         Upper.France {
             bindings = <
-&tog 7   &kp N1      &kp N2            &kp N3     &kp N4     &kp N5     &tog 3                                                   &mo 5      &kp N6     &kp N7        &kp N8      &kp N9      &kp N0            &degressymbole
-&kp TAB  &kp LS(A)   &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)     &kp LS(I)   &kp LS(O)   &kp LS(P)         &Tremaseul
-&tog 0   &kp LS(Q)   &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 7    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 8      &kp LS(H)  &kp LS(J)     &kp LS(K)   &kp LS(L)   &kp LS(M)         &kp PERCENT
-&mo 7    &kp LS(W)   &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp QUESTION  &kp KP_DOT  &kp FSLH    &paragraphsymbol  &mo 7
-&mo 4    &kp ESCAPE  &kp GREATER_THAN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP        &kp DOWN    &GBPsymbol  &mumicrosymbol    &mo 4
+&cubesymbole  &kp N1      &kp N2            &kp N3     &kp N4     &kp N5     &tog 3                                                   &mo 5      &kp N6     &kp N7        &kp N8      &kp N9      &kp N0            &degressymbole
+&kp TAB       &kp LS(A)   &kp LS(Z)         &kp LS(E)  &kp LS(R)  &kp LS(T)  &none                                                    &none      &kp LS(Y)  &kp LS(U)     &kp LS(I)   &kp LS(O)   &kp LS(P)         &Tremaseul
+&tog 0        &kp LS(Q)   &kp LS(S)         &kp LS(D)  &kp LS(F)  &kp LS(G)  &tog 7    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 8      &kp LS(H)  &kp LS(J)     &kp LS(K)   &kp LS(L)   &kp LS(M)         &kp PERCENT
+&mo 7         &kp LS(W)   &kp LS(X)         &kp LS(C)  &kp LS(V)  &kp LS(B)                       &kp HOME      &kp PG_UP                        &kp LS(N)  &kp QUESTION  &kp KP_DOT  &kp FSLH    &paragraphsymbol  &mo 7
+&mo 4         &kp ESCAPE  &kp GREATER_THAN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP        &kp DOWN    &GBPsymbol  &mumicrosymbol    &mo 4
             >;
         };
 
@@ -350,12 +350,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Shift.Accents.France {
-            if-layers = <0>;
-            then-layer = <6>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
