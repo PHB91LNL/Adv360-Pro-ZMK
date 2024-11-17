@@ -198,6 +198,34 @@
             bindings = <>;
             label = "CUBESYMBOLE";
         };
+
+        Eurosymbole: Eurosymbole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "EUROSYMBOLE";
+        };
+
+        angstromsymbole: angstromsymbole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "ANGSTROMSYMBOLE";
+        };
+
+        diametersymbol: diametersymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "DIAMETERSYMBOL";
+        };
+
+        deutschssetletter: litersymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "LITERSYMBOL";
+        };
     };
 
     keymap {
@@ -275,11 +303,21 @@
 
         Caracteres.Speciaux {
             bindings = <
-&cubesymbole  &plusoumoinssymbole  &kp TILDE  &kp POUND  &kp LEFT_BRACE  &kp LEFT_BRACKET  &trans                                      &trans  &kp PIPE  &kp GRAVE  &kp NON_US_BACKSLASH  &kp RIGHT_BRACE  &kp AT_SIGN  &kp RIGHT_BRACKET
-&trans        &trans               &trans     &trans     &trans          &trans            &trans                                      &trans  &trans    &trans     &trans                &trans           &trans       &trans
-&trans        &trans               &trans     &trans     &trans          &trans            &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans     &trans                &trans           &trans       &trans
-&trans        &trans               &trans     &trans     &trans          &trans                            &trans      &trans                  &trans    &trans     &trans                &trans           &trans       &trans
-&trans        &trans               &trans     &trans     &trans                            &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans                &trans           &trans       &trans
+&cubesymbole  &plusoumoinssymbole  &kp TILDE  &kp POUND        &kp LEFT_BRACE  &kp LEFT_BRACKET    &trans                                      &trans  &kp PIPE  &kp GRAVE  &kp NON_US_BACKSLASH  &kp RIGHT_BRACE  &kp AT_SIGN  &kp RIGHT_BRACKET
+&trans        &angstromsymbole     &trans     &Eurosymbole     &trans          &trans              &trans                                      &trans  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &diametersymbol  &trans          &trans              &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &trans           &trans          &deutschssetletter                  &trans      &trans                  &trans    &trans     &trans                &trans           &trans       &trans
+&trans        &trans               &trans     &trans           &trans                              &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans                &trans           &trans       &trans
+            >;
+        };
+
+        Greek.Alphabet {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
