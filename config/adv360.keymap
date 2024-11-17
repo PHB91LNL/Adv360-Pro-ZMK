@@ -45,11 +45,11 @@
 
         layer_keypad {
             bindings = <
-&kp EQUAL  &kp UP          &none     &none     &none      &none  &trans                                                   &mo 3      &kp KP_EQUAL  &kp KP_NUM  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &kp UP_ARROW
-&kp TAB    &kp DOWN_ARROW  &kp W     &kp E     &kp R      &kp T  &none                                                    &none      &kp INS       &kp KP_N7   &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &kp DOWN
-&kp ESC    &kp A           &kp S     &kp D     &kp F      &kp G  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp DEL       &kp KP_N4   &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &kp SQT
-&kp LSHFT  &kp Z           &kp X     &kp C     &kp V      &kp B                       &kp HOME      &kp PG_UP                        &none         &kp KP_N1   &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &kp RSHFT
-&mo 2      &kp GRAVE       &kp CAPS  &kp LEFT  &kp RIGHT         &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                &kp LEFT    &kp RIGHT     &kp KP_DOT       &kp KP_ENTER  &mo 2
+&kp EQUAL  &kp UP          &none     &none     &none      &none  &trans                                                   &mo 3      &kp PRINTSCREEN  &kp KP_NUM  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &kp UP_ARROW
+&kp TAB    &kp DOWN_ARROW  &kp W     &kp E     &kp R      &kp T  &none                                                    &none      &kp INS          &kp KP_N7   &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &kp DOWN
+&kp ESC    &kp A           &kp S     &kp D     &kp F      &kp G  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp DEL          &kp KP_N4   &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &kp SQT
+&kp LSHFT  &kp Z           &kp X     &kp C     &kp V      &kp B                       &kp HOME      &kp PG_UP                        &kp KP_EQUAL     &kp KP_N1   &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &kp RSHFT
+&mo 2      &kp GRAVE       &kp CAPS  &kp LEFT  &kp RIGHT         &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                   &kp LEFT    &kp RIGHT     &kp KP_DOT       &kp KP_ENTER  &mo 2
             >;
         };
 
